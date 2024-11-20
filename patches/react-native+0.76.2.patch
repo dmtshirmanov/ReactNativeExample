@@ -1,0 +1,14 @@
+diff --git a/node_modules/react-native/ReactAndroid/cmake-utils/ReactNative-application.cmake b/node_modules/react-native/ReactAndroid/cmake-utils/ReactNative-application.cmake
+index 805ef11..437b7c2 100644
+--- a/node_modules/react-native/ReactAndroid/cmake-utils/ReactNative-application.cmake
++++ b/node_modules/react-native/ReactAndroid/cmake-utils/ReactNative-application.cmake
+@@ -32,7 +32,8 @@ endif(CCACHE_FOUND)
+ 
+ set(BUILD_DIR ${PROJECT_BUILD_DIR})
+ if(CMAKE_HOST_WIN32)
+-        string(REPLACE "\\" "/" BUILD_DIR ${BUILD_DIR})
++    string(REPLACE "\\" "/" REACT_ANDROID_DIR ${REACT_ANDROID_DIR})
++    string(REPLACE "\\" "/" BUILD_DIR ${BUILD_DIR})
+ endif()
+ 
+ file(GLOB input_SRC CONFIGURE_DEPENDS
